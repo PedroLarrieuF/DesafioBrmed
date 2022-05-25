@@ -1,0 +1,18 @@
+.title{
+    font-family: Monospace;
+    font-size: 25px;
+}
+
+.subtitle{
+    font-family: Monospace;
+    font-size: 12px
+}
+
+body {
+    background-image: linear-gradient(to left, #9c15b9, #9e12c5, #9f11d1, #a010de, #9f12eb);
+    font-family: Monospace;
+    font-size: 20px;
+
+}
+
+

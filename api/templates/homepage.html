@@ -1,0 +1,82 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '\styles.css' %}">
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+
+    <title>API DJANGO</title>
+</head>
+<body>
+    
+    <h1 class = 'title'>Olá!</h1>
+    
+    <div id="container"></div> 
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <form action="", name = "custom_data", method = "POST">
+        {% csrf_token %}
+        <input type="text" value="2022-{{month}}-{{day}}", name = 'days'></input>
+        <button type="submit">Add day and refresh</button>
+    </form>
+
+    <script>
+        Highcharts.chart('container', {
+    chart: {
+        type: 'area'
+    },
+    title: {
+        text: 'Desenvolvido por: Pedro Larrieu :)'
+    },
+    xAxis: {
+        tickmarkPlacement: 'on',
+        title: {
+            enabled: false
+        }
+    },
+    yAxis: {
+        title: {
+            
+            text: 'Rates'
+
+
+        }
+    },
+    tooltip: {
+        split: true,
+        valueSuffix: 'values based in USA-Dollar'
+    },
+    plotOptions: {
+        area: {
+            stacking: 'normal',
+            lineColor: '#666666',
+            lineWidth: 1,
+            marker: {
+                lineWidth: 1,
+                lineColor: '#666666'
+            }
+        }
+    },
+    series: [{
+
+        name: 'EUR',
+        data: {{eur}}
+
+    }, {
+        name: 'USD',
+        data: {{usd}}
+    }, {
+        
+        name: 'JPY',
+        data: {{jpy}}},
+    {
+        name: 'days',
+        data: [0,0,0,0,0]
+    }
+    ]
+});
+</script>
+</body>
+</html>
