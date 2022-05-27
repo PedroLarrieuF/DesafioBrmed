@@ -35,9 +35,13 @@ Não feito:
     * Em linux:
         * cd venv
         * cd Scripts
-        * activate
+        * . activate
 
-        *obs:* Em alguns casos será necessário executar 'bash actiavte' no ultimo comando.
+        *obs:* Em alguns casos será necessário executar '. actiavte' no ultimo comando.
+    *obs*: 
+        * Caso queira instalar sua própria venv execute os seguintes comandos:
+        * python3 -m venv venv.
+        * repita os passos acima.
 
 * Execute o pip:
 

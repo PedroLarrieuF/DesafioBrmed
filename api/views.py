@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from datetime import date,datetime
-from django.contrib import messages
 from .models import Base_rates
 import requests
 import json
